@@ -74,7 +74,7 @@ def make_arg_parser(cls, tt=None):
         '--ia',
         dest='input_arg_val',
         metavar='INPUT_ARG',
-        help=tt('Ido2f1l'),
+        help=tt(u'Ido2f1l'),
     )
 
     parser.add_argument(
@@ -95,7 +95,7 @@ def make_arg_parser(cls, tt=None):
         '--if',
         dest='input_file_path',
         metavar='INPUT_FILE',
-        help=tt('C3Q0xhN'),
+        help=tt(u'C3Q0xhN'),
     )
 
     parser.add_argument(
@@ -109,7 +109,7 @@ def make_arg_parser(cls, tt=None):
         '--of',
         dest='output_file_path',
         metavar='OUTPUT_FILE',
-        help=tt('EqJvFJ7'),
+        help=tt(u'EqJvFJ7'),
     )
 
     parser.add_argument(
@@ -123,21 +123,21 @@ def make_arg_parser(cls, tt=None):
         '--ofnte',
         dest='esc_to_empty',
         action='store_true',
-        help=tt('EXSjWRS'),
+        help=tt(u'EXSjWRS'),
     )
 
     mutex_grp2.add_argument(
         '--ofnts',
         dest='esc_to_space',
         action='store_true',
-        help=tt('AcLZD2I'),
+        help=tt(u'AcLZD2I'),
     )
 
     mutex_grp2.add_argument(
         '--ofntn',
         dest='esc_to_notation',
         action='store_true',
-        help=tt('GeFIZQT'),
+        help=tt(u'GeFIZQT'),
     )
 
     parser.add_argument(
@@ -205,94 +205,94 @@ MAIN_RET_V_DECODE_OUTPUT_FILE_PATH_ERR = 14
 MAIN_RET_V_WRITE_STDOUT_ERR = 15
 
 TT_D = {
-    'BlY3BYu': """Error: Unsupported Python version.
+    'BlY3BYu': u"""Error: Unsupported Python version.
 Make sure your Python 2 version is >=2.7 or Python 3 version is >=3.2""",
-    'A1sZVil': '#/ Native encoding settings',
-    '5tOBLf3': '#/ SixyIO encoding settings',
-    'ClrVxdw': """Error: Failed decoding input data from cmd arg.
+    'A1sZVil': u'#/ Native encoding settings',
+    '5tOBLf3': u'#/ SixyIO encoding settings',
+    'ClrVxdw': u"""Error: Failed decoding input data from cmd arg.
 Encoding is |{}|.
 Please use cmd arg |--cae| to specify a correct encoding.""",
-    'IkN5JGx': 'Try if |--cae {}| works.',
-    'Ed6AdJ9': """Failed decoding input file path.
+    'IkN5JGx': u'Try if |--cae {}| works.',
+    'Ed6AdJ9': u"""Failed decoding input file path.
 Encoding is |{}|.
 Please use cmd arg |--cae| to specify a correct encoding.""",
-    'Ei1tnrR': 'Try if |--cae {}| works.',
-    'B6Lk4XI': """Error: Failed opening input file.
+    'Ei1tnrR': u'Try if |--cae {}| works.',
+    'B6Lk4XI': u"""Error: Failed opening input file.
 Path is |{}|.""",
-    'AqphK0K': """Error: Failed decoding input file data.
+    'AqphK0K': u"""Error: Failed decoding input file data.
 Encoding is |{}|.
 Path is |{}|.
 Please use cmd arg |--ife| to specify a correct encoding.""",
-    'B37msq7': """Error: Failed reading input file.
+    'B37msq7': u"""Error: Failed reading input file.
 Path is |{}|.""",
-    'IXybCAa': """Error: Failed decoding input data from stdin.
+    'IXybCAa': u"""Error: Failed decoding input data from stdin.
 Encoding is |{}|.
 Please use cmd arg |--stdie| to specify a correct encoding.""",
-    'AtkIgBP': 'Error: Failed reading input data from stdin.',
-    'CWhvSZG': """Error: Failed decoding subproc command.
+    'AtkIgBP': u'Error: Failed reading input data from stdin.',
+    'CWhvSZG': u"""Error: Failed decoding subproc command.
 Encoding is |{}|.
 Please use cmd arg |--cae| to specify a correct encoding.""",
-    'FdgFTmj': 'Try if |--cae {}| works.',
-    'Dm3mIS3': """Error: Failed encoding subproc command.
+    'FdgFTmj': u'Try if |--cae {}| works.',
+    'Dm3mIS3': u"""Error: Failed encoding subproc command.
 Encoding is |{}|.
 Please use cmd arg |--spce| to specify a correct encoding.""",
-    'BItk9r9': 'Try if |--spce {}| works.',
-    'BdLRCnr': """Error: Failed encoding data to subproc stdin.
+    'BItk9r9': u'Try if |--spce {}| works.',
+    'BdLRCnr': u"""Error: Failed encoding data to subproc stdin.
 Encoding is |{}|.
 Please use cmd arg |--spie| to specify a correct encoding.""",
-    'BCK6oxA': 'Try if |--spie {}| works.',
-    'FsfEwqB': 'Error: Failed running subproc command.',
-    'DKm86F3': """Error: Failed decoding data from subproc stderr.
+    'BCK6oxA': u'Try if |--spie {}| works.',
+    'FsfEwqB': u'Error: Failed running subproc command.',
+    'DKm86F3': u"""Error: Failed decoding data from subproc stderr.
 Encoding is |{}|.
 Please use cmd arg |--spee| to specify a correct encoding.""",
-    'CnoJPoC': 'Try if |--spee {}| works.',
-    'E2z7epN': 'Error: Failed writing data from subproc stderr to stderr.',
-    'GRzLy3z': """Error: Failed decoding data from subproc stdout.
+    'CnoJPoC': u'Try if |--spee {}| works.',
+    'E2z7epN': u'Error: Failed writing data from subproc stderr to stderr.',
+    'GRzLy3z': u"""Error: Failed decoding data from subproc stdout.
 Encoding is |{}|.
 Please use cmd arg |--spoe| to specify a correct encoding.""",
-    'Dl5ML6g': 'Try if |--spoe {}| works.',
-    'CmfwiAq': """Error: Failed decoding output file path.
+    'Dl5ML6g': u'Try if |--spoe {}| works.',
+    'CmfwiAq': u"""Error: Failed decoding output file path.
 Encoding is |{}|.
 Please use cmd arg |--cae| to specify a correct encoding.""",
-    'GuCfy1d': 'Try if |--cae {}| works.',
-    'IRQoaLq': """Error: Failed opening output file.
+    'GuCfy1d': u'Try if |--cae {}| works.',
+    'IRQoaLq': u"""Error: Failed opening output file.
 Path is |{}|.""",
-    'HshHpp0': """Error: Failed encoding output data to file.
+    'HshHpp0': u"""Error: Failed encoding output data to file.
 Encoding is |{}|.
 Path is |{}|.
 Please use cmd arg |--ofe| to specify a correct encoding.""",
-    'AGCSyfb': """Error: Failed writing to output file.
+    'AGCSyfb': u"""Error: Failed writing to output file.
 Path is |{}|.""",
-    'ARUsbv8': """Error: Failed encoding output data to stdout.
+    'ARUsbv8': u"""Error: Failed encoding output data to stdout.
 Encoding is |{}|.
 Please use cmd arg |--stdoe| to specify a correct encoding.""",
-    'DhY9aWc': 'Error: Failed writing to stdout',
-    'BUv9hsz': 'Show encoding info.',
-    'EOTuiRi': 'Show debugging info.',
-    'IfBWe0d': 'Show help info.',
-    'C3Q0xhN': 'Input file path.',
-    'Ido2f1l': 'Input cmd arg value.',
-    'EqJvFJ7': 'Output file path.',
-    'EXSjWRS': 'Convert invalid characters in output file name to empty.',
-    'AcLZD2I': 'Convert invalid characters in output file name to spaces.',
-    'GeFIZQT': 'Convert invalid characters in output file name to %% notation.',
-    'Ay0if1H': 'Stdin, stdout, and stderr encoding. Override env var |PYTHONIOENCODING|.',
-    'AQTcrPq': """Stdin encoding.
+    'DhY9aWc': u'Error: Failed writing to stdout',
+    'BUv9hsz': u'Show encoding info.',
+    'EOTuiRi': u'Show debugging info.',
+    'IfBWe0d': u'Show help info.',
+    'C3Q0xhN': u'Input file path.',
+    'Ido2f1l': u'Input cmd arg value.',
+    'EqJvFJ7': u'Output file path.',
+    'EXSjWRS': u'Convert invalid characters in output file name to empty.',
+    'AcLZD2I': u'Convert invalid characters in output file name to spaces.',
+    'GeFIZQT': u'Convert invalid characters in output file name to %% notation.',
+    'Ay0if1H': u'Stdin, stdout, and stderr encoding. Override env var |PYTHONIOENCODING|.',
+    'AQTcrPq': u"""Stdin encoding.
 Override env var |PYTHONIOENCODING| and cmd arg |--stdioe|.""",
-    'HTstQFo': """Stdout encoding.
+    'HTstQFo': u"""Stdout encoding.
 Override env var |PYTHONIOENCODING| and cmd arg |--stdioe|.""",
-    'DO2cvC9': """Stderr encoding.
+    'DO2cvC9': u"""Stderr encoding.
 Override env var |PYTHONIOENCODING| and cmd arg |--stdioe|.""",
-    'Az6N4l7': 'Cmd arg encoding. By default selected automatically.',
-    'FVgnCju': 'File system encoding. By default selected automatically.',
-    'HdnJ115': 'Input file encoding. By default utf-8.',
-    'EQq5Nla': 'Output file encoding. By default utf-8.',
-    'C5DLRzH': 'Subproc command.',
-    'CcmEKpl': 'Subproc command argument separator.',
-    'BViterk': 'Subproc command encoding. By default utf-8.',
-    'Ch8MLx8': 'Subproc stdin encoding. By default utf-8.',
-    'Gn5NkKf': 'Subproc stdout encoding. By default utf-8.',
-    'HxVZaBY': 'Subproc stderr encoding. By default utf-8.',
+    'Az6N4l7': u'Cmd arg encoding. By default selected automatically.',
+    'FVgnCju': u'File system encoding. By default selected automatically.',
+    'HdnJ115': u'Input file encoding. By default utf-8.',
+    'EQq5Nla': u'Output file encoding. By default utf-8.',
+    'C5DLRzH': u'Subproc command.',
+    'CcmEKpl': u'Subproc command argument separator.',
+    'BViterk': u'Subproc command encoding. By default utf-8.',
+    'Ch8MLx8': u'Subproc stdin encoding. By default utf-8.',
+    'Gn5NkKf': u'Subproc stdout encoding. By default utf-8.',
+    'HxVZaBY': u'Subproc stderr encoding. By default utf-8.',
 }
 
 def main():
@@ -379,12 +379,12 @@ def main():
         #/
         sio.stderr_print_safe(tt('A1sZVil'))
         sio.stderr_print_safe(SixyIO.get_native_encodings_info())
-        sio.stderr_print_safe('')
+        sio.stderr_print_safe(u'')
 
         #/
         sio.stderr_print_safe(tt('5tOBLf3'))
         sio.stderr_print_safe(sio.get_sixyio_encodings_info())
-        sio.stderr_print_safe('')
+        sio.stderr_print_safe(u'')
 
     #/ 9qw2HGt
     args_obj = parser.parse_args(args)
@@ -594,7 +594,7 @@ def main():
             subproc_stderr_btxt = stdout_stderr_tuple[1]
             
             if not subproc_stderr_btxt:
-                subproc_stderr_utxt = ''
+                subproc_stderr_utxt = u''
             else:
                 subproc_stderr_utxt = sio.spee_to_u(subproc_stderr_btxt)
         except Exception:
@@ -615,7 +615,7 @@ def main():
         if subproc_stderr_utxt:
             #/ 7qcEsZD
             try:
-                sio.stderr_write_fmt_safe('#/ Subproc stderr\n---\n{}---\n', subproc_stderr_utxt)
+                sio.stderr_write_fmt_safe(u'#/ Subproc stderr\n---\n{}---\n', subproc_stderr_utxt)
             except Exception as e:
                 #/ 8cijfJr
                 sio.stderr_print_safe(tt('E2z7epN'))
@@ -632,7 +632,7 @@ def main():
             subproc_stdout_btxt = stdout_stderr_tuple[0]
             
             if not subproc_stdout_btxt:
-                subproc_stdout_utxt = ''
+                subproc_stdout_utxt = u''
             else:
                 subproc_stdout_utxt = sio.spoe_to_u(subproc_stdout_btxt)
                 
@@ -697,29 +697,29 @@ def main():
             #/
             if esc_to_space or esc_to_empty:
                 #/
-                esc_char = ' ' if esc_to_space else ''
+                esc_char = u' ' if esc_to_space else u''
         
                 output_file_name = output_file_name\
-                    .replace('\\', esc_char)\
-                    .replace('/', esc_char)\
-                    .replace('<', esc_char)\
-                    .replace('>', esc_char)\
-                    .replace(':', esc_char)\
-                    .replace('*', esc_char)\
-                    .replace('?', esc_char)\
-                    .replace('"', esc_char)\
-                    .replace('|', esc_char)
+                    .replace(u'\\', esc_char)\
+                    .replace(u'/', esc_char)\
+                    .replace(u'<', esc_char)\
+                    .replace(u'>', esc_char)\
+                    .replace(u':', esc_char)\
+                    .replace(u'*', esc_char)\
+                    .replace(u'?', esc_char)\
+                    .replace(u'"', esc_char)\
+                    .replace(u'|', esc_char)
             elif esc_to_notation:
                 output_file_name = output_file_name\
-                    .replace('\\', '%5C')\
-                    .replace('/', '%2F')\
-                    .replace('<', '%3C')\
-                    .replace('>', '%3E')\
-                    .replace(':', '%3A')\
-                    .replace('*', '%2A')\
-                    .replace('?', '%3F')\
-                    .replace('"', '%22')\
-                    .replace('|', '%7C')
+                    .replace(u'\\', u'%5C')\
+                    .replace(u'/', u'%2F')\
+                    .replace(u'<', u'%3C')\
+                    .replace(u'>', u'%3E')\
+                    .replace(u':', u'%3A')\
+                    .replace(u'*', u'%2A')\
+                    .replace(u'?', u'%3F')\
+                    .replace(u'"', u'%22')\
+                    .replace(u'|', u'%7C')
             else:
                 assert False
                 

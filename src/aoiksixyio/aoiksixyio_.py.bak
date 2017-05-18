@@ -53,7 +53,7 @@ class SixyIO(object):
     #/
     BTXT_CLS = str if IS_PY2 else bytes
     
-    UTXT_CLS = str if IS_PY2 else str
+    UTXT_CLS = unicode if IS_PY2 else str
     
     #/
     _LCE = locale.getdefaultlocale()[1]
@@ -138,21 +138,21 @@ class SixyIO(object):
     SPEE_NOT_VALID = 'GmH4cDl'
     
     TT_D = {
-        STDEE_NOT_VALID: 'Error: Stderr encoding is not valid.\nEncoding is |{}|.\nPlease use env var |PYTHONIOENCODING| or cmd arg |--stdee| to specify a correct one.\n',
-        STDOE_NOT_VALID: 'Error: Stdout encoding is not valid.\nEncoding is |{}|.\nPlease use env var |PYTHONIOENCODING| or cmd arg |--stdoe| to specify a correct one.\n',
-        STDIE_NOT_VALID: 'Error: Stdin encoding is not valid.\nEncoding is |{}|.\nPlease use env var |PYTHONIOENCODING| or cmd arg |--stdie| to specify a correct one.\n',
-        CAE_NOT_VALID: 'Error: Cmdarg encoding is not valid.\nEncoding is |{}|.\n',
-        FSE_NOT_VALID: 'Error: Filesystem encoding is not valid.\nEncoding is |{}|.\n',
-        IFE_NOT_VALID: 'Error: Input file encoding is not valid.\nEncoding is |{}|.\n',
-        OFE_NOT_VALID: 'Error: Output file encoding is not valid.\nEncoding is |{}|.\n',
-        SPCE_NOT_VALID: 'Error: Subproc command encoding is not valid.\nEncoding is |{}|.\n',
-        SPIE_NOT_VALID: 'Error: Subproc stdin encoding is not valid.\nEncoding is |{}|.\n',
-        SPOE_NOT_VALID: 'Error: Subproc stdout encoding is not valid.\nEncoding is |{}|.\n',
-        SPEE_NOT_VALID: 'Error: Subproc stderr encoding is not valid.\nEncoding is |{}|.\n',
+        STDEE_NOT_VALID: u'Error: Stderr encoding is not valid.\nEncoding is |{}|.\nPlease use env var |PYTHONIOENCODING| or cmd arg |--stdee| to specify a correct one.\n',
+        STDOE_NOT_VALID: u'Error: Stdout encoding is not valid.\nEncoding is |{}|.\nPlease use env var |PYTHONIOENCODING| or cmd arg |--stdoe| to specify a correct one.\n',
+        STDIE_NOT_VALID: u'Error: Stdin encoding is not valid.\nEncoding is |{}|.\nPlease use env var |PYTHONIOENCODING| or cmd arg |--stdie| to specify a correct one.\n',
+        CAE_NOT_VALID: u'Error: Cmdarg encoding is not valid.\nEncoding is |{}|.\n',
+        FSE_NOT_VALID: u'Error: Filesystem encoding is not valid.\nEncoding is |{}|.\n',
+        IFE_NOT_VALID: u'Error: Input file encoding is not valid.\nEncoding is |{}|.\n',
+        OFE_NOT_VALID: u'Error: Output file encoding is not valid.\nEncoding is |{}|.\n',
+        SPCE_NOT_VALID: u'Error: Subproc command encoding is not valid.\nEncoding is |{}|.\n',
+        SPIE_NOT_VALID: u'Error: Subproc stdin encoding is not valid.\nEncoding is |{}|.\n',
+        SPOE_NOT_VALID: u'Error: Subproc stdout encoding is not valid.\nEncoding is |{}|.\n',
+        SPEE_NOT_VALID: u'Error: Subproc stderr encoding is not valid.\nEncoding is |{}|.\n',
     }
     
     def __init__(self):
-        msg = 'Can not create object of class SixyIO. Use class SixyIOObj instead.'
+        msg = u'Can not create object of class SixyIO. Use class SixyIOObj instead.'
         
         raisex(AssertionError(SixyIO.SIXYIO_CLS_NOT_ALLOW_CREATING_OBJ, msg))
     
@@ -216,27 +216,27 @@ class SixyIO(object):
         #/
         txt_s = []
         
-        txt_s.append(SixyIO.format('{:<25}{}', 'PYTHONIOENCODING', SixyIO.cae_to_u_safe(os.environ.get('PYTHONIOENCODING') or '')))
+        txt_s.append(SixyIO.format(u'{:<25}{}', u'PYTHONIOENCODING', SixyIO.cae_to_u_safe(os.environ.get('PYTHONIOENCODING') or u'')))
         
         #/
         loc_lang, loc_encoding = locale.getdefaultlocale()
         
-        txt_s.append(SixyIO.format('{:<25}{}', 'locale lang', SixyIO.to_u_safe(loc_lang or '')))
-        txt_s.append(SixyIO.format('{:<25}{}', 'locale enco', SixyIO.to_u_safe(loc_encoding or '')))
+        txt_s.append(SixyIO.format(u'{:<25}{}', u'locale lang', SixyIO.to_u_safe(loc_lang or u'')))
+        txt_s.append(SixyIO.format(u'{:<25}{}', u'locale enco', SixyIO.to_u_safe(loc_encoding or u'')))
         
         #/
-        txt_s.append(SixyIO.format('{:<25}{}', 'stdin', SixyIO.to_u_safe(sys.stdin.encoding or '')))
-        txt_s.append(SixyIO.format('{:<25}{}', 'stdout', SixyIO.to_u_safe(sys.stdout.encoding or '')))
-        txt_s.append(SixyIO.format('{:<25}{}', 'stderr', SixyIO.to_u_safe(sys.stderr.encoding or '')))
+        txt_s.append(SixyIO.format(u'{:<25}{}', u'stdin', SixyIO.to_u_safe(sys.stdin.encoding or u'')))
+        txt_s.append(SixyIO.format(u'{:<25}{}', u'stdout', SixyIO.to_u_safe(sys.stdout.encoding or u'')))
+        txt_s.append(SixyIO.format(u'{:<25}{}', u'stderr', SixyIO.to_u_safe(sys.stderr.encoding or u'')))
         
         #/
-        txt_s.append(SixyIO.format('{:<25}{}', 'fs', SixyIO.to_u_safe(sys.getfilesystemencoding() or '')))
+        txt_s.append(SixyIO.format(u'{:<25}{}', u'fs', SixyIO.to_u_safe(sys.getfilesystemencoding() or u'')))
         
         #/
-        txt_s.append(SixyIO.format('{:<25}{}', 'default', SixyIO.to_u_safe(sys.getdefaultencoding() or '')))
+        txt_s.append(SixyIO.format(u'{:<25}{}', u'default', SixyIO.to_u_safe(sys.getdefaultencoding() or u'')))
         
         #/
-        res = '\n'.join(txt_s)
+        res = u'\n'.join(txt_s)
         
         return res
     
@@ -307,7 +307,7 @@ class SixyIO(object):
     @staticmethod
     def stdout_print(utxt, encoding=None, errors=None):
         SixyIO.stdout_write(utxt, encoding=encoding, errors=errors)
-        SixyIO.stdout_write('\n', encoding=encoding, errors=errors)
+        SixyIO.stdout_write(u'\n', encoding=encoding, errors=errors)
         
     @staticmethod
     def stdout_write_safe(utxt, encoding=None, errors=None):
@@ -324,7 +324,7 @@ class SixyIO(object):
         
         #/
         SixyIO.stdout_write(utxt, encoding=encoding, errors=errors)
-        SixyIO.stdout_write('\n', encoding=encoding, errors=errors)
+        SixyIO.stdout_write(u'\n', encoding=encoding, errors=errors)
         
     @staticmethod
     def stdout_write_fmt(fmt, *args, **kwargs):
@@ -351,7 +351,7 @@ class SixyIO(object):
         
         #/
         SixyIO.stdout_write(utxt, encoding=_encoding, errors=_errors)
-        SixyIO.stdout_write('\n', encoding=_encoding, errors=_errors)
+        SixyIO.stdout_write(u'\n', encoding=_encoding, errors=_errors)
         
     @staticmethod
     def stdout_write_fmt_safe(fmt, *args, **kwargs):
@@ -378,10 +378,10 @@ class SixyIO(object):
             assert fmt is None or SixyIO.is_u(fmt)
         
         #/
-        utxt = utxt or ''
+        utxt = utxt or u''
         
         #/
-        fmt = fmt or '{}---\n{}---\n'
+        fmt = fmt or u'{}---\n{}---\n'
         
         #/
         tb_utxt = SixyIO.get_traceback_utxt()
@@ -428,7 +428,7 @@ class SixyIO(object):
     @staticmethod
     def stderr_print(utxt, encoding=None, errors=None):
         SixyIO.stderr_write(utxt, encoding=encoding, errors=errors)
-        SixyIO.stderr_write('\n', encoding=encoding, errors=errors)
+        SixyIO.stderr_write(u'\n', encoding=encoding, errors=errors)
         
     @staticmethod
     def stderr_write_safe(utxt, encoding=None, errors=None):
@@ -445,7 +445,7 @@ class SixyIO(object):
         
         #/
         SixyIO.stderr_write(utxt, encoding=encoding, errors=errors)
-        SixyIO.stderr_write('\n', encoding=encoding, errors=errors)
+        SixyIO.stderr_write(u'\n', encoding=encoding, errors=errors)
         
     @staticmethod
     def stderr_write_fmt(fmt, *args, **kwargs):
@@ -472,7 +472,7 @@ class SixyIO(object):
         
         #/
         SixyIO.stderr_write(utxt, encoding=_encoding, errors=_errors)
-        SixyIO.stderr_write('\n', encoding=_encoding, errors=_errors)
+        SixyIO.stderr_write(u'\n', encoding=_encoding, errors=_errors)
         
     @staticmethod
     def stderr_write_fmt_safe(fmt, *args, **kwargs):
@@ -499,10 +499,10 @@ class SixyIO(object):
             assert fmt is None or SixyIO.is_u(fmt)
         
         #/
-        utxt = utxt or ''
+        utxt = utxt or u''
         
         #/
-        fmt = fmt or '{}---\n{}---\n'
+        fmt = fmt or u'{}---\n{}---\n'
         
         #/
         tb_utxt = SixyIO.get_traceback_utxt()
@@ -529,7 +529,7 @@ class SixyIO(object):
     @staticmethod
     def is_u(obj):
         if SixyIO.IS_PY2:
-            unicode_cls = str
+            unicode_cls = unicode
         else:
             unicode_cls = str
         
@@ -600,7 +600,7 @@ class SixyIO(object):
         if SixyIO.IS_PY2:
             if isinstance(obj, str):
                 res = obj
-            elif isinstance(obj, str):
+            elif isinstance(obj, unicode):
                 res = obj.decode(encoding, errors)
             else:
                 res = str(obj)
@@ -739,7 +739,7 @@ class SixyIO(object):
                     assert SixyIO.is_u(arg)
             
             if kwargs:
-                for key, val in list(kwargs.items()):
+                for key, val in kwargs.items():
                     assert SixyIO.is_u(key)
                     assert SixyIO.is_u(val)
         
@@ -795,7 +795,7 @@ class FileForceWriteUnicodeWrapper(object):
                     assert SixyIO.is_u(arg)
             
             if kwargs:
-                for key, val in list(kwargs.items()):
+                for key, val in kwargs.items():
                     assert SixyIO.is_u(key)
                     assert SixyIO.is_u(val)
                     
@@ -1115,7 +1115,7 @@ class SixyIOObj(object):
         return self.__str__()
     
     def get_sixyio_encodings_info(self):
-        return """%-25s%s
+        return u"""%-25s%s
 %-25s%s
 %-25s%s
 %-25s%s
@@ -1125,16 +1125,16 @@ class SixyIOObj(object):
 %-25s%s
 %-25s%s
 %-25s%s""" % (
-       "stdin:", self.stdie_utxt,
-       "stdout:", self.stdoe_utxt,
-       "stderr:", self.stdee_utxt,
-       "cae:", self.cae_utxt,
-       "fse:", self.fse_utxt,
-       "ife:", self.ife_utxt,
-       "ofe:", self.ofe_utxt,
-       "spce:", self.spce_utxt,
-       "spie:", self.spie_utxt,
-       "spoe:", self.spoe_utxt,
+       u"stdin:", self.stdie_utxt,
+       u"stdout:", self.stdoe_utxt,
+       u"stderr:", self.stdee_utxt,
+       u"cae:", self.cae_utxt,
+       u"fse:", self.fse_utxt,
+       u"ife:", self.ife_utxt,
+       u"ofe:", self.ofe_utxt,
+       u"spce:", self.spce_utxt,
+       u"spie:", self.spie_utxt,
+       u"spoe:", self.spoe_utxt,
        )
     
     def stdin_make_reader(self, encoding=None, errors=None):
